@@ -26,7 +26,7 @@ export default function App() {
     .then(data => setQuestions(data.results))
   setIsSubmitted(false)
   setAnsweredCorrectly(0)
-  }, [])
+  }, [formData])
 
     function newGame() {
       fetch(`https://opentdb.com/api.php?amount=${formData.numberOfQuestions}&category=${formData.category}&difficulty=${formData.difficulty}&type=${formData.type}`)
